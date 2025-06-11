@@ -17,7 +17,7 @@ berkasSimpan = currentdir + '\\bab_01_2_distribusiGender.pdf'
  
 # Data to plot
 labels = 'Laki-laki', 'Perempuan'
-sizes = [66201,62847]
+sizes = [68439,64947]
 colors = ['lightskyblue', 'lightcoral']
 explode = (0.1, 0)  # explode 1st slice
  

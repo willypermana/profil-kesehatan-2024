@@ -62,7 +62,7 @@ for i, v in enumerate(bar1):
     # check if the coordinate is not NaN
     # the script run fine without it, but it was nice to not see any error popping
     if np.isfinite(v):
-        ax.text(v+0.5, i, '{:n}'.format(v), ha='left', va='center', fontsize='x-small')
+        ax.text(v+0.5, i, locale.format_string("%.2f", v), ha='left', va='center', fontsize='x-small')
 
 # finishing
 pyrfig = plt.figure(1)

@@ -51,8 +51,8 @@ ax.spines['right'].set_visible(False)
 
 # add data labels
 for i, v in enumerate(bar1):
-    ax.text(v+0.5, i, '{:n}'.format(v), ha='left', va='center', fontsize='x-small')
-
+    ax.text(v+0.5, i, locale.format_string("%.2f", v), ha='left', va='center', fontsize='x-small')
+    
 # finishing
 pyrfig = plt.figure(1)
 pyrfig.set_figwidth(8)
