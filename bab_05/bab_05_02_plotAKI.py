@@ -18,7 +18,7 @@ berkasData = currentdir +'\\bab_05_02_dataPlotAKI.csv'
 berkasSimpan = currentdir +'\\bab_05_02_plotAKI.pdf'
 sumbuX = 'Tahun'
 sumbuY = 'Puskesmas'
-tickerSumbuY = np.arange(0,510,100)
+tickerSumbuY = np.arange(0,210,50)
 tickerSumbuY2 = np.arange(0,21,5)
 
 # read data file
@@ -73,7 +73,8 @@ ax.legend((garis1[0], garis2[0]), kolomLegen, fontsize='x-small', loc='upper cen
 
 # make labels for plots
 for i, txt in enumerate(aki):
-		ax.annotate('{:n}'.format(txt), (ind[i],aki[i]+0.5))
+		# ax.annotate('{:n}'.format(txt), (ind[i],aki[i]+0.5))
+        ax.annotate(locale.format_string("%.2f", txt), (ind[i],aki[i]+0.5))
 for i, txt in enumerate(kematian):
 		ax2.annotate(txt, (ind[i],kematian[i]))
 

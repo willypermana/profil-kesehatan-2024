@@ -16,7 +16,7 @@ berkasSimpan = currentdir +'\\bab_06_13_hipertensi.pdf'
 # judulDiagram = 'Cakupan Pelayanan Hipertensi\nTahun 2021'
 sumbuX = 'Cakupan'
 sumbuY = 'Puskesmas/ Kabupaten'
-tickerSumbuX = np.arange(0,151,25)
+tickerSumbuX = np.arange(0,251,50)
 labelBar1 = 'L'
 labelBar2 = 'P'
 labelBar3 = 'L+P'
@@ -62,11 +62,11 @@ ax.legend(fontsize='x-small', loc='upper center', bbox_to_anchor=(0.5, -0.15), f
 
 # add data label
 for i, v in enumerate(bar1):
-    ax.text(v + widthDL, i, '{:n}'.format(v), ha='left', va='center', fontsize='x-small')
+    ax.text(v + widthDL, i, locale.format_string("%.2f", v), ha='left', va='center', fontsize='x-small')
 for i, v in enumerate(bar2):
-    ax.text(v + widthDL, i + width, '{:n}'.format(v), ha='left', va='center', fontsize='x-small')
+    ax.text(v + widthDL, i + width, locale.format_string("%.2f", v), ha='left', va='center', fontsize='x-small')
 for i, v in enumerate(bar3):
-    ax.text(v + widthDL, i + 2*width, '{:n}'.format(v), ha='left', va='center', fontsize='x-small')
+    ax.text(v + widthDL, i + 2*width, locale.format_string("%.2f", v), ha='left', va='center', fontsize='x-small')
 
 # finishing
 pyrfig = plt.figure(1)

@@ -19,7 +19,7 @@ sumbuX = 'Metode KB'
 tickerSumbuY = np.arange(0,110,25)
 
 # read data file
-colnames = ['kecamatan','Kondom','Suntik','Pil','AKDR','MOP','MOW','Implan','MAL','Aktif']
+colnames = ['kecamatan','Kondom','Suntik','Pil','AKDR','MOP','MOW','Implan','MAL','Total KB Aktif']
 data = pandas.read_csv(berkasData, names=colnames, sep=';')
 metode = colnames[1:10]
 # get kabupaten row
@@ -52,7 +52,7 @@ ax.spines['right'].set_visible(False)
 
 # make labels for bars
 for i, v in enumerate(bar1):
-    ax.text(i, v+2, '{:n}'.format(round(v,2)), ha='center', va='center', fontsize='x-small')
+    ax.text(i, v+2, locale.format_string("%.2f", v), ha='center', va='center', fontsize='x-small')
 
 # finishing
 pyrfig = plt.figure(1)

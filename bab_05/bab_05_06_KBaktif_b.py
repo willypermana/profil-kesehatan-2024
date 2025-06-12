@@ -67,15 +67,15 @@ ax.legend(fontsize='x-small', loc='upper center', bbox_to_anchor=(0.5, -0.15), f
 
 # add data label
 for i, v in enumerate(bar1):
-    ax.text(v + widthDL, i, '{:n}'.format(round(v,2)), ha='left', va='center', fontsize=7)
+    ax.text(v + widthDL, i, locale.format_string("%.2f", v), ha='left', va='center', fontsize=7)
 for i, v in enumerate(bar2):
-    ax.text(v + widthDL, i + width, '{:n}'.format(round(v,2)), ha='left', va='center', fontsize=7)
+    ax.text(v + widthDL, i + width, locale.format_string("%.2f", v), ha='left', va='center', fontsize=7)
 for i, v in enumerate(bar3):
-    ax.text(v + widthDL, i + 2*width, '{:n}'.format(round(v,2)), ha='left', va='center', fontsize=7)
+    ax.text(v + widthDL, i + 2*width, locale.format_string("%.2f", v), ha='left', va='center', fontsize=7)
 for i, v in enumerate(bar4):
-    ax.text(v + widthDL, i + 3*width, '{:n}'.format(round(v,2)), ha='left', va='center', fontsize=7)
+    ax.text(v + widthDL, i + 3*width, locale.format_string("%.2f", v), ha='left', va='center', fontsize=7)
 for i, v in enumerate(bar5):
-    ax.text(v + widthDL, i + 4*width, '{:n}'.format(round(v,2)), ha='left', va='center', fontsize=7)
+    ax.text(v + widthDL, i + 4*width, locale.format_string("%.2f", v), ha='left', va='center', fontsize=7)
     
 # finishing
 pyrfig = plt.figure(1)

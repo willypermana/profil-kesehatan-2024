@@ -64,12 +64,12 @@ for i, v in enumerate(bar1):
     # check if the coordinate is not NaN
     # the script run fine without it, but it was nice to not see any error popping
     if np.isfinite(v):
-        ax.text(v + widthDL, i, '{:n}'.format(v), ha='left', va='center', fontsize='x-small')
+        ax.text(v + widthDL, i, locale.format_string("%.2f", v), ha='left', va='center', fontsize='x-small')
 for i, v in enumerate(bar2):
     # check if the coordinate is not NaN
     # the script run fine without it, but it was nice to not see any error popping
     if np.isfinite(v):
-        ax.text(v + widthDL, i + width, '{:n}'.format(v), ha='left', va='center', fontsize='x-small')
+        ax.text(v + widthDL, i + width, locale.format_string("%.2f", v), ha='left', va='center', fontsize='x-small')
 
 # finishing
 pyrfig = plt.figure(1)

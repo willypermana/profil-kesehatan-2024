@@ -56,9 +56,9 @@ ax.legend(fontsize='x-small', loc='upper center', bbox_to_anchor=(0.5, -0.15), f
 
 # add data label
 for i, v in enumerate(bar1):
-    ax.text(v+0.5, i, '{:n}'.format(v), ha='left', va='center', fontsize='x-small')
+    ax.text(v+0.5, i, locale.format_string("%.2f", v), ha='left', va='center', fontsize='x-small')
 for i, v in enumerate(bar2):
-    ax.text(v+0.5, i+0.35, '{:n}'.format(v), ha='left', va='center', fontsize='x-small')
+    ax.text(v+0.5, i+0.35, locale.format_string("%.2f", v), ha='left', va='center', fontsize='x-small')
 
 # finishing
 pyrfig = plt.figure(1)

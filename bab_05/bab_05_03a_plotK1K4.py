@@ -57,9 +57,9 @@ ax.legend(fontsize='x-small', loc='upper center', bbox_to_anchor=(0.5, -0.15), f
 
 #make labels for plots
 for i, txt in enumerate(dataK1):
-		ax.annotate('{:n}'.format(txt), (ind[i],dataK1[i]), xytext=(0,5), textcoords='offset points', fontsize='x-small', color='royalblue')
+		ax.annotate(locale.format_string("%.2f", txt), (ind[i],dataK1[i]), xytext=(0,5), textcoords='offset points', fontsize='x-small', color='royalblue')
 for i, txt in enumerate(dataK4):
-		ax.annotate('{:n}'.format(txt), (ind[i],dataK4[i]), xytext=(0,-10), textcoords='offset points', fontsize='x-small', color='#cc0000')
+		ax.annotate(locale.format_string("%.2f", txt), (ind[i],dataK4[i]), xytext=(0,-10), textcoords='offset points', fontsize='x-small', color='#cc0000')
 
 
 # finishing

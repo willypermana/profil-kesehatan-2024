@@ -40,7 +40,7 @@ rects3 = ax.barh(ind + 2*width, bar3, width, color='yellowgreen', label = 'L+P')
 # ax.set_title(judulDiagram)
 # yticks can be set to auto
 ax.set_xticks(np.arange(0,16,5)) 
-ax.set_xlabel(sumbuY)
+ax.set_xlabel(sumbuX)
 ax.xaxis.set_major_formatter(FuncFormatter(lambda x, pos: "{:n}".format(x)))
 
 ax.set_yticks(ind+width)
