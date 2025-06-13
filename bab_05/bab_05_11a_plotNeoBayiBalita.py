@@ -17,7 +17,7 @@ berkasSimpan = currentdir +'\\bab_05_11a_plotNeoBayiBalita.pdf'
 # judulDiagram = 'Angka Kematian neonatal, Bayi dan Balita\nTahun 2017-2021'
 sumbuX = 'Tahun'
 sumbuY = 'per 1.000 kelahiran'
-tickerSumbuY = np.arange(0,21,5)
+tickerSumbuY = np.arange(0,31,10)
 
 # read data file
 colnames = ['tahun','akabaL', 'akabaP', 'akabaLP']
@@ -40,7 +40,7 @@ garis3 = ax.plot(ind, dataLP, marker='.', color='yellowgreen', label='AKABA')
 # add some text for labels, title and axes ticks
 # ax.set_title(judulDiagram)
 # yticks can be set to auto
-ax.set_yticks(np.arange(0,22,5)) 
+ax.set_yticks(tickerSumbuY) 
 ax.set_ylabel(sumbuY)
 ax.yaxis.set_major_formatter(FuncFormatter(lambda y, pos: '{:n}'.format(y)))
 
@@ -57,12 +57,11 @@ ax.legend(fontsize='x-small', loc='upper center', bbox_to_anchor=(0.5, -0.15), f
 
 # make labels for plots
 for i, txt in enumerate(dataL):
-		ax.annotate(txt, xy=(ind[i]-0.3,dataL[i]-0.3), color='royalblue')
+		ax.annotate(locale.format_string("%.2f", txt), xy=(ind[i],dataL[i]+0.3), color='royalblue')
 for i, txt in enumerate(dataP):
-		ax.annotate(txt, xy=(ind[i]-0.1,dataP[i]+0.3), color='#cc0000')
+		ax.annotate(locale.format_string("%.2f", txt), xy=(ind[i]-0.1,dataP[i]+0.3), color='#cc0000')
 for i, txt in enumerate(dataLP):
-		ax.annotate(txt, xy=(ind[i]+0.1,dataLP[i]),  color='darkgreen')
-
+		ax.annotate(locale.format_string("%.2f", txt), xy=(ind[i]+0.1,dataLP[i]-0.3),  color='darkgreen')
 # finishing
 pyrfig = plt.figure(1)
 pyrfig.set_figwidth(8)

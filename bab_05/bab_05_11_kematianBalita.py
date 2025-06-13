@@ -17,7 +17,7 @@ berkasSimpan = currentdir +'\\bab_05_11_kematianBalita.pdf'
 # judulDiagram = 'Jumlah Kematian Balita\nTahun 2021'
 sumbuX = 'Jumlah'
 sumbuY = 'Puskesmas\ Kabupaten'
-tickerSumbuX = np.arange(0,31,5)
+tickerSumbuX = np.arange(0,41,10)
 
 # read data file
 colnames = ['kecamatan','balitaL','balitaP','balitaLP']

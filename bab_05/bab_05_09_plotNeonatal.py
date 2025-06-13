@@ -57,11 +57,11 @@ ax.legend(fontsize='x-small', loc='upper center', bbox_to_anchor=(0.5, -0.15), f
 
 # make labels for plots
 for i, txt in enumerate(dataL):
-		ax.annotate(txt, xy=(ind[i]-0.3,dataL[i]-0.3), color='royalblue')
+		ax.annotate(locale.format_string("%.2f", txt), xy=(ind[i]-0.3,dataL[i]-0.3), color='royalblue')
 for i, txt in enumerate(dataP):
-		ax.annotate(txt, xy=(ind[i]-0.1,dataP[i]+0.3), color='#cc0000')
+		ax.annotate(locale.format_string("%.2f", txt), xy=(ind[i]-0.1,dataP[i]+0.3), color='#cc0000')
 for i, txt in enumerate(dataLP):
-		ax.annotate(txt, xy=(ind[i]+0.1,dataLP[i]),  color='darkgreen')
+		ax.annotate(locale.format_string("%.2f", txt), xy=(ind[i]+0.1,dataLP[i]),  color='darkgreen')
 
 # finishing
 pyrfig = plt.figure(1)

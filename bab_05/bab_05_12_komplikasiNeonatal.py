@@ -17,7 +17,7 @@ berkasSimpan = currentdir +'\\bab_05_12_komplikasiNeonatal.pdf'
 # judulDiagram = 'Penanganan Komplikasi Neonatal\nTahun 2021'
 sumbuX = 'Cakupan'
 sumbuY = 'Puskesmas/ Kabupaten'
-tickerSumbuX = np.arange(0,110,25)
+tickerSumbuX = np.arange(0,126,25)
 
 # read data file
 colnames = ['puskesmas','komplikasi']
@@ -57,7 +57,7 @@ ax.legend(fontsize='x-small', loc='upper center', bbox_to_anchor=(0.5, -0.15), f
 
 # add data label
 for i, v in enumerate(bar1):
-    ax.text(v+0.5, i, '{:n}'.format(v), ha='left', va='center', fontsize='x-small')
+    ax.text(v+0.5, i, locale.format_string("%.2f", v), ha='left', va='center', fontsize='x-small')
 
 # finishing
 pyrfig = plt.figure(1)

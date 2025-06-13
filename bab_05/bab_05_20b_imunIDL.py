@@ -16,7 +16,7 @@ berkasSimpan = currentdir +'\\bab_05_20b_imunIDL.pdf'
 # judulDiagram = 'Cakupan Imunisasi Dasar Lengkap\nTahun 2021'
 sumbuX = 'Cakupan'
 sumbuY = 'Puskesmas/ Kabupaten'
-tickerSumbuX = np.arange(0,126,25)
+tickerSumbuX = np.arange(0,110,25)
 labelRects1 = 'L'
 labelRects2 = 'P'
 labelRects3 = 'L+P'
@@ -64,11 +64,11 @@ ax.legend(fontsize='x-small', loc='upper center', bbox_to_anchor=(0.5, -0.15), f
 
 # add data label
 for i, v in enumerate(bar4):
-    ax.text(v + widthDL, i, '{:n}'.format(v), ha='left', va='center', fontsize='x-small')
+    ax.text(v + widthDL, i, locale.format_string("%.2f", v), ha='left', va='center', fontsize='x-small')
 for i, v in enumerate(bar5):
-    ax.text(v + widthDL, i + width, '{:n}'.format(v), ha='left', va='center', fontsize='x-small')
+    ax.text(v + widthDL, i + width, locale.format_string("%.2f", v), ha='left', va='center', fontsize='x-small')
 for i, v in enumerate(bar6):
-    ax.text(v + widthDL, i + 2*width, '{:n}'.format(v), ha='left', va='center', fontsize='x-small')
+    ax.text(v + widthDL, i + 2*width, locale.format_string("%.2f", v), ha='left', va='center', fontsize='x-small')
 
 # finishing
 pyrfig = plt.figure(1)

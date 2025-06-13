@@ -15,9 +15,9 @@ sys.path.insert(0, parentdir)
 berkasData = currentdir +'\\bab_05_09_dataKematianNeonatal.csv'
 berkasSimpan = currentdir +'\\bab_05_09_kematianNeonatal.pdf'
 # judulDiagram = 'Jumlah Kematian Neonatal\nTahun 2021'
-sumbuX = 'Cakupan'
+sumbuX = 'Jumlah'
 sumbuY = 'Puskesmas/ Kabupaten'
-tickerSumbuX = np.arange(0,21,5)
+tickerSumbuX = np.arange(0,31,5)
 
 # read data file
 colnames = ['puskesmas','neoL','neoP','neoLP']
