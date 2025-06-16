@@ -48,7 +48,7 @@ ax.set_xticks(tickerSumbuX)
 ax.set_xlabel(sumbuX)
 ax.xaxis.set_major_formatter(FuncFormatter(lambda x, pos: "{:n}%".format(x)))
 
-ax.set_yticks(ind+width)
+ax.set_yticks(ind+width*1.5)
 ax.set_yticklabels(list([ '\n'.join(wrap(l, 10)) for l in puskesmas ]))
 ax.invert_yaxis()
 ax.set_ylabel(sumbuY)
@@ -64,13 +64,13 @@ ax.legend(fontsize='x-small', loc='upper center', bbox_to_anchor=(0.5, -0.15), f
 
 # add data label
 for i, v in enumerate(bar1):
-    ax.text(v + widthDL, i, '{:n}'.format(v), ha='left', va='center', fontsize='x-small')
+    ax.text(v + widthDL, i, locale.format_string("%.2f", v), ha='left', va='center', fontsize='x-small')
 for i, v in enumerate(bar2):
-    ax.text(v + widthDL, i + width, '{:n}'.format(v), ha='left', va='center', fontsize='x-small')
+    ax.text(v + widthDL, i + width, locale.format_string("%.2f", v), ha='left', va='center', fontsize='x-small')
 for i, v in enumerate(bar3):
-    ax.text(v + widthDL, i + 2*width, '{:n}'.format(v), ha='left', va='center', fontsize='x-small')
+    ax.text(v + widthDL, i + 2*width, locale.format_string("%.2f", v), ha='left', va='center', fontsize='x-small')
 for i, v in enumerate(bar4):
-    ax.text(v + widthDL, i + 3*width, '{:n}'.format(v), ha='left', va='center', fontsize='x-small')
+    ax.text(v + widthDL, i + 3*width, locale.format_string("%.2f", v), ha='left', va='center', fontsize='x-small')
 
 # finishing
 pyrfig = plt.figure(1)
