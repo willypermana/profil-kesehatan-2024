@@ -33,7 +33,7 @@ fig, ax = plt.subplots()
 rects1 = ax.barh(ind, bar1, width, color='steelblue', label = 'Posyandu Aktif')
 
 # add some text for labels, title and axes ticks
-ax.set_title(judulDiagram)
+# ax.set_title(judulDiagram)
 ax.set_xticks(tickerSumbuX)
 ax.set_xlabel(sumbuX)
 ax.set_ylabel(sumbuY)
@@ -69,7 +69,7 @@ ax.legend(fontsize='x-small', loc='upper center', bbox_to_anchor=(0.5, -0.15), f
 
 # horizontal bar labels. remember to figure out converting to function
 for i, v in enumerate(bar1):
-    ax.text(v+0.5, i, locale.format_string('%.2f',float(v)), ha='left', va='center', fontsize='x-small')
+    ax.text(v+0.5, i, locale.format_string("%.2f", v), ha='left', va='center', fontsize='x-small')
     #locale.format('%.2f',height)
 
 # finishing
