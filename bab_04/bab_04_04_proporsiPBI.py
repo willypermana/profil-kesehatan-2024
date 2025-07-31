@@ -19,8 +19,8 @@ judulDiagram = 'Proporsi PBI'
  
 # Data to plot
 labels = '', 'PBI'
-paguDinkes = 102135300434
-paguJKN = 18799200000
+paguDinkes = 217419105329
+paguJKN = 20367694200
 paguDinkesNonJKN = paguDinkes - paguJKN
 sizes = [paguDinkesNonJKN,paguJKN]
 colors = ['lightskyblue', 'lightcoral']
