@@ -27,12 +27,12 @@ bar1 = data.IMD.tolist()
 bar2 = data.ASI.tolist()
 
 ind = np.arange(len(puskesmas))  # the x locations for the groups
-width = 0.35       # the width of the bars
+width = 0.5       # the width of the bars
+widthDL = 0.5     # the width of the data labels
 
 # make bars
 fig, ax = plt.subplots()
-rects1 = ax.barh(ind, bar1, width, color='steelblue', label='IMD')
-rects2 = ax.barh(ind + width, bar2, width, color='orangered', label = 'ASI Eksklusif')
+rects1 = ax.barh(ind, bar2, width, color='steelblue', label='ASI Eksklusif')
 
 # add some text for labels, title and axes ticks
 # ax.set_title(judulDiagram)
@@ -55,10 +55,10 @@ ax.set_position([box.x0, box.y0 + box.height * 0.1, box.width, box.height * 0.9]
 ax.legend(fontsize='x-small', loc='upper center', bbox_to_anchor=(0.5, -0.15), fancybox=True, shadow=True, ncol=2)
 
 # add data label
-for i, v in enumerate(bar1):
-    ax.text(v+0.5, i, locale.format_string("%.2f", v), ha='left', va='center', fontsize='x-small')
 for i, v in enumerate(bar2):
-    ax.text(v+0.5, i+0.35, locale.format_string("%.2f", v), ha='left', va='center', fontsize='x-small')
+    ax.text(v + widthDL, i, locale.format_string("%.2f", v), ha='left', va='center', fontsize='x-small')
+# for i, v in enumerate(bar2):
+    # ax.text(v+0.5, i+0.35, locale.format_string("%.2f", v), ha='left', va='center', fontsize='x-small')
 
 # finishing
 pyrfig = plt.figure(1)
@@ -68,6 +68,6 @@ pyrfig.set_figheight(5)
 # adjust subplot to make room for legend
 fig.subplots_adjust(bottom=-0.15)
 plt.tight_layout()
-# plt.savefig(berkasSimpan)
-# plt.close(pyrfig)
-plt.show()
+plt.savefig(berkasSimpan)
+plt.close(pyrfig)
+# plt.show()
